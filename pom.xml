@@ -48,10 +48,6 @@
                             <shadedPattern>com.toonystank.libs.gson</shadedPattern> <!-- Replace this -->
                         </relocation>
                         <relocation>
-                            <groupId>net.kyori</groupId>
-                            <shadedPattern>com.toonystank.libs.adventure</shadedPattern> <!-- Replace this -->
-                        </relocation>
-                        <relocation>
                             <pattern>dev.vankka</pattern>
                             <shadedPattern>com.toonystank.libs.vankka</shadedPattern> <!-- Replace this -->
                         </relocation>
