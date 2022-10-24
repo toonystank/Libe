@@ -16,11 +16,10 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.taggernation.taggernationlib.updatechecker.downloads;
+package com.toonystank.libe.updatechecker.downloads;
 
 import org.apache.commons.io.FilenameUtils;
 import org.bukkit.plugin.Plugin;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -31,11 +30,11 @@ import java.nio.channels.ReadableByteChannel;
 @SuppressWarnings("unused")
 public class DownloadManager {
 
-    URL downloadUrl;
+    private URL downloadUrl;
     boolean override;
-    Plugin plugin;
+    private final Plugin plugin;
     boolean downloadSuccess;
-    File pluginsDirectory;
+    private final File pluginsDirectory;
 
     public DownloadManager(URL downloadUrl, Plugin plugin) {
         this.downloadUrl = downloadUrl;

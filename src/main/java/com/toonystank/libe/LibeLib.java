@@ -16,22 +16,20 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.taggernation.taggernationlib;
+package com.toonystank.libe;
 
-import com.taggernation.taggernationlib.placeholder.Placeholder;
+import com.toonystank.libe.utils.Placeholder;
 import io.github.alenalex.adventurelib.spigot.impl.SpigotMessenger;
 import lombok.Getter;
 import lombok.SneakyThrows;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.plugin.java.JavaPlugin;
 
-
 @Getter
-public class TaggerNationLib extends JavaPlugin {
+public class LibeLib extends JavaPlugin {
 
     private String papi;
-
-    public static TaggerNationLib plugin;
+    public static LibeLib plugin;
     public static Placeholder papiHook;
     @Getter
     public static SpigotMessenger messenger;
@@ -44,13 +42,13 @@ public class TaggerNationLib extends JavaPlugin {
             papi = "SKIPPED";
         }
     }
+
     @SneakyThrows
     @Override
     public void onEnable() {
         // Plugin startup logic
         plugin = this;
         papiHook = new Placeholder();
-//        messageFramework = new FrameworkBuilder().setPlugin(this).withMiniMessageEngine().build();
         messenger = SpigotMessenger
                 .builder()
                 .setPlugin(this)

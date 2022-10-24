@@ -16,20 +16,17 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.taggernation.taggernationlib.updatechecker;
+package com.toonystank.libe.updatechecker;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-
-import static com.taggernation.taggernationlib.TaggerNationLib.messenger;
-
+import static com.toonystank.libe.LibeLib.messenger;
 
 public class UpdateListener implements Listener {
 
   private final UpdateChecker instance;
-
   public UpdateListener(UpdateChecker instance) {
     this.instance = instance;
   }

@@ -16,7 +16,7 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.taggernation.taggernationlib.placeholder;
+package com.toonystank.libe.utils;
 
 import org.bukkit.entity.Player;
 import me.clip.placeholderapi.PlaceholderAPI;

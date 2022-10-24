@@ -16,15 +16,14 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.taggernation.taggernationlib.updatechecker;
+package com.toonystank.libe.updatechecker;
 
 import com.google.gson.Gson;
-import com.taggernation.taggernationlib.updatechecker.downloads.DownloadManager;
+import com.toonystank.libe.updatechecker.downloads.DownloadManager;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
-
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
@@ -32,7 +31,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static com.taggernation.taggernationlib.TaggerNationLib.messenger;
+import static com.toonystank.libe.LibeLib.messenger;
 
 /*
  * Json update checker
@@ -41,14 +40,13 @@ import static com.taggernation.taggernationlib.TaggerNationLib.messenger;
  */
 @SuppressWarnings("unused")
 public class UpdateChecker {
+
   private final Plugin plugin;
   private int interval;
   private final UpdateChecker instance;
-
   public void setUpdate(Update update) {
     this.update = update;
   }
-
   private Update update;
   private List<String> message = new ArrayList<>();
   private String permission = null;
@@ -56,11 +54,9 @@ public class UpdateChecker {
   private final URL url;
   private DownloadManager downloadManager = null;
   public Gson gson = new Gson();
-
   private void setReader(InputStreamReader reader) {
     this.reader = reader;
   }
-
   private InputStreamReader reader;
 
   /**

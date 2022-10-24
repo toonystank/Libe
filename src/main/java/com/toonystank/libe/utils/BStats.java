@@ -1,4 +1,4 @@
-package com.taggernation.taggernationlib.metrics;
+package com.toonystank.libe.utils;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
@@ -647,6 +647,7 @@ public class BStats {
      * <p>While this class is neither feature-rich nor the most performant one, it's sufficient enough
      * for its use-case.
      */
+    @SuppressWarnings("unused")
     public static class JsonObjectBuilder {
 
         private StringBuilder builder = new StringBuilder();
@@ -734,16 +735,14 @@ public class BStats {
          *
          * @param key The key of the field.
          * @param values The integer array.
-         * @return A reference to this object.
          */
-        public JsonObjectBuilder appendField(String key, int[] values) {
+        public void appendField(String key, int[] values) {
             if (values == null) {
                 throw new IllegalArgumentException("JSON values must not be null");
             }
             String escapedValues =
                     Arrays.stream(values).mapToObj(String::valueOf).collect(Collectors.joining(","));
             appendFieldUnescaped(key, "[" + escapedValues + "]");
-            return this;
         }
 
         /**
@@ -751,16 +750,14 @@ public class BStats {
          *
          * @param key The key of the field.
          * @param values The integer array.
-         * @return A reference to this object.
          */
-        public JsonObjectBuilder appendField(String key, JsonObject[] values) {
+        public void appendField(String key, JsonObject[] values) {
             if (values == null) {
                 throw new IllegalArgumentException("JSON values must not be null");
             }
             String escapedValues =
                     Arrays.stream(values).map(JsonObject::toString).collect(Collectors.joining(","));
             appendFieldUnescaped(key, "[" + escapedValues + "]");
-            return this;
         }
 
         /**
