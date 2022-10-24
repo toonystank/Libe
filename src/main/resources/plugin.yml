@@ -1,5 +1,5 @@
-name: TaggerNationLib
+name: LibeLib
 version: '${project.version}'
-main: com.taggernation.taggernationlib.TaggerNationLib
+main: com.toonystank.libe.LibeLib
 api-version: 1.13
-discription: TaggerNationLib
+discription: "LibeLib is a library for Edward's bukkit plugins."
