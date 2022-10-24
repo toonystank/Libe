@@ -28,11 +28,15 @@ import org.bukkit.plugin.java.JavaPlugin;
 @Getter
 public class LibeLib extends JavaPlugin {
 
-    private String papi;
+    @Getter
+    public String papi;
+    @Getter
     public static LibeLib plugin;
+    @Getter
     public static Placeholder papiHook;
     @Getter
     public static SpigotMessenger messenger;
+    @Getter
     public static MiniMessage miniMessage;
 
     public void papiExist() {
